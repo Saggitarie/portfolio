@@ -10,13 +10,23 @@ importers:
     dependencies:
       '@astrojs/check':
         specifier: ^0.5.10
-        version: 0.5.10(typescript@5.4.5)
+        version: 0.5.10(prettier@2.8.8)(typescript@5.4.5)
+      '@storyblok/astro':
+        specifier: ^4.0.5
+        version: 4.0.5(astro@4.6.3(@types/node@20.12.7)(typescript@5.4.5))
       astro:
         specifier: ^4.6.3
-        version: 4.6.3(typescript@5.4.5)
+        version: 4.6.3(@types/node@20.12.7)(typescript@5.4.5)
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
+      vite:
+        specifier: ^5.2.10
+        version: 5.2.10(@types/node@20.12.7)
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.7
+        version: 20.12.7
 
 packages:
 
@@ -564,6 +574,14 @@ packages:
   '@shikijs/core@1.3.0':
     resolution: {integrity: sha512-7fedsBfuILDTBmrYZNFI8B6ATTxhQAasUHllHmjvSZPnoq4bULWoTpHwmuQvZ8Aq03/tAa2IGo6RXqWtHdWaCA==}
 
+  '@storyblok/astro@4.0.5':
+    resolution: {integrity: sha512-CraxasFSj6DH5jzGHR9zkLnxopg+7aHmIkjLKTlxlzMeMj/kIm7Kd0bDlpkdmfZVv1Xax4EA5C8jgX5fzojNzw==}
+    peerDependencies:
+      astro: ^3.0.0 || ^4.0.0
+
+  '@storyblok/js@3.0.8':
+    resolution: {integrity: sha512-JY+abbswBId84Ubr0yRwNpq5Klf9546Ia2Qs1pn6en5Trz8o6EcBJIwxvR6evjJ0Vp2cLKT7MV1yfGLAtnzycA==}
+
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
 
@@ -596,6 +614,9 @@ packages:
 
   '@types/nlcst@1.0.4':
     resolution: {integrity: sha512-ABoYdNQ/kBSsLvZAekMhIPMQ3YUZvavStpKYs7BjLLuKVmIMA0LUgZ7b54zzuWJRbHF80v1cNf4r90Vd6eMQDg==}
+
+  '@types/node@20.12.7':
+    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
 
   '@types/unist@2.0.10':
     resolution: {integrity: sha512-IfYcSBWE3hLpBg8+X2SEa8LVkJdJEkT2Ese2aaLs3ptGdVtABxndrMaxuFlQ1qdFf9Q5rDvDpxI3WwgvKFAsQA==}
@@ -746,6 +767,10 @@ packages:
   camelcase@7.0.1:
     resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
     engines: {node: '>=14.16'}
+
+  camelcase@8.0.0:
+    resolution: {integrity: sha512-8WB3Jcas3swSvjIeA2yvCJ+Miyz5l1ZmB6HFb9R1317dt9LCQoswg/BGrmAmkWVEszSrrg4RwmO46qIm2OEnSA==}
+    engines: {node: '>=16'}
 
   caniuse-lite@1.0.30001611:
     resolution: {integrity: sha512-19NuN1/3PjA3QI8Eki55N8my4LzfkMCRLgCVfrl/slbSAchQfV0+GwjPrK3rq37As4UCLlM/DHajbKkAqbv92Q==}
@@ -1537,6 +1562,11 @@ packages:
     resolution: {integrity: sha512-MkXsENfftWSRpzCzImcp4FRsCc3y1opwB73CfCNWyzMqArju2CrlMHlqB7VexKiPEOjGMbttv1r9fSCn5S610w==}
     engines: {node: '>=10'}
 
+  prettier@2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+
   prismjs@1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
     engines: {node: '>=6'}
@@ -1700,6 +1730,9 @@ packages:
     resolution: {integrity: sha512-xhV7w8S+bUwlPTb4bAOUQhv8/cSS5offJuX8GQGq32ONF0ZtDWKfkdomM3HMRA+LhX6um/FZ0COqlwsjD53LeQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
+  storyblok-js-client@6.7.3:
+    resolution: {integrity: sha512-fBBxtyju6xtFYgAgoWBaU7WagB8M6wN+N+A3UAhZtAPW8yZmlbr3nZu26ErYIbSLaeueyFlcNrI4Kag+Kszsdw==}
+
   streamx@2.16.1:
     resolution: {integrity: sha512-m9QYj6WygWyWa3H1YY69amr4nVgy61xfjys7xO7kviL5rfIEc2naf+ewFiOA+aEJD7y0JO3h2GoiUv4TDwEGzQ==}
 
@@ -1811,6 +1844,9 @@ packages:
     resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
     hasBin: true
+
+  undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
 
   unherit@3.0.1:
     resolution: {integrity: sha512-akOOQ/Yln8a2sgcLj4U0Jmx0R5jpIg2IUyRrWOzmEbjBtGzBdHtSeFKgoEcoH4KYIG/Pb8GQ/BwtYm0GCq1Sqg==}
@@ -2082,9 +2118,9 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@astrojs/check@0.5.10(typescript@5.4.5)':
+  '@astrojs/check@0.5.10(prettier@2.8.8)(typescript@5.4.5)':
     dependencies:
-      '@astrojs/language-server': 2.8.4(typescript@5.4.5)
+      '@astrojs/language-server': 2.8.4(prettier@2.8.8)(typescript@5.4.5)
       chokidar: 3.6.0
       fast-glob: 3.3.2
       kleur: 4.1.5
@@ -2098,7 +2134,7 @@ snapshots:
 
   '@astrojs/internal-helpers@0.4.0': {}
 
-  '@astrojs/language-server@2.8.4(typescript@5.4.5)':
+  '@astrojs/language-server@2.8.4(prettier@2.8.8)(typescript@5.4.5)':
     dependencies:
       '@astrojs/compiler': 2.7.1
       '@jridgewell/sourcemap-codec': 1.4.15
@@ -2111,11 +2147,13 @@ snapshots:
       volar-service-css: 0.0.34(@volar/language-service@2.1.6)
       volar-service-emmet: 0.0.34(@volar/language-service@2.1.6)
       volar-service-html: 0.0.34(@volar/language-service@2.1.6)
-      volar-service-prettier: 0.0.34(@volar/language-service@2.1.6)
+      volar-service-prettier: 0.0.34(@volar/language-service@2.1.6)(prettier@2.8.8)
       volar-service-typescript: 0.0.34(@volar/language-service@2.1.6)
       volar-service-typescript-twoslash-queries: 0.0.34(@volar/language-service@2.1.6)
       vscode-html-languageservice: 5.2.0
       vscode-uri: 3.0.8
+    optionalDependencies:
+      prettier: 2.8.8
     transitivePeerDependencies:
       - typescript
 
@@ -2531,6 +2569,16 @@ snapshots:
 
   '@shikijs/core@1.3.0': {}
 
+  '@storyblok/astro@4.0.5(astro@4.6.3(@types/node@20.12.7)(typescript@5.4.5))':
+    dependencies:
+      '@storyblok/js': 3.0.8
+      astro: 4.6.3(@types/node@20.12.7)(typescript@5.4.5)
+      camelcase: 8.0.0
+
+  '@storyblok/js@3.0.8':
+    dependencies:
+      storyblok-js-client: 6.7.3
+
   '@types/babel__core@7.20.5':
     dependencies:
       '@babel/parser': 7.24.4
@@ -2573,6 +2621,10 @@ snapshots:
   '@types/nlcst@1.0.4':
     dependencies:
       '@types/unist': 2.0.10
+
+  '@types/node@20.12.7':
+    dependencies:
+      undici-types: 5.26.5
 
   '@types/unist@2.0.10': {}
 
@@ -2677,7 +2729,7 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro@4.6.3(typescript@5.4.5):
+  astro@4.6.3(@types/node@20.12.7)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.7.1
       '@astrojs/internal-helpers': 0.4.0
@@ -2736,8 +2788,8 @@ snapshots:
       tsconfck: 3.0.3(typescript@5.4.5)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.10
-      vitefu: 0.2.5(vite@5.2.10)
+      vite: 5.2.10(@types/node@20.12.7)
+      vitefu: 0.2.5(vite@5.2.10(@types/node@20.12.7))
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.22.5
@@ -2835,6 +2887,8 @@ snapshots:
       ieee754: 1.2.1
 
   camelcase@7.0.1: {}
+
+  camelcase@8.0.0: {}
 
   caniuse-lite@1.0.30001611: {}
 
@@ -3840,6 +3894,9 @@ snapshots:
       path-exists: 4.0.0
       which-pm: 2.0.0
 
+  prettier@2.8.8:
+    optional: true
+
   prismjs@1.29.0: {}
 
   prompts@2.4.2:
@@ -4079,6 +4136,8 @@ snapshots:
     dependencies:
       bl: 5.1.0
 
+  storyblok-js-client@6.7.3: {}
+
   streamx@2.16.1:
     dependencies:
       fast-fifo: 1.3.2
@@ -4205,6 +4264,8 @@ snapshots:
 
   typescript@5.4.5: {}
 
+  undici-types@5.26.5: {}
+
   unherit@3.0.1: {}
 
   unified@10.1.2:
@@ -4324,17 +4385,18 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite@5.2.10:
+  vite@5.2.10(@types/node@20.12.7):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.16.0
     optionalDependencies:
+      '@types/node': 20.12.7
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.2.10):
+  vitefu@0.2.5(vite@5.2.10(@types/node@20.12.7)):
     optionalDependencies:
-      vite: 5.2.10
+      vite: 5.2.10(@types/node@20.12.7)
 
   volar-service-css@0.0.34(@volar/language-service@2.1.6):
     dependencies:
@@ -4359,11 +4421,12 @@ snapshots:
     optionalDependencies:
       '@volar/language-service': 2.1.6
 
-  volar-service-prettier@0.0.34(@volar/language-service@2.1.6):
+  volar-service-prettier@0.0.34(@volar/language-service@2.1.6)(prettier@2.8.8):
     dependencies:
       vscode-uri: 3.0.8
     optionalDependencies:
       '@volar/language-service': 2.1.6
+      prettier: 2.8.8
 
   volar-service-typescript-twoslash-queries@0.0.34(@volar/language-service@2.1.6):
     optionalDependencies:

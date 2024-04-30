@@ -17,8 +17,8 @@ export default defineConfig({
 				},
 				apiOptions: {
 					// Choose your Storyblok space region
-				region: 'ap', // optional,  or 'eu' (default)
-			},
+					region: 'ap', // optional,  or 'eu' (default)
+				},
 		}),
 		tailwind(),
 	],

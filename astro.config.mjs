@@ -13,7 +13,10 @@ export default defineConfig({
 				accessToken: env.STORYBLOK_TOKEN,
 				components: {
 					// Add your components here
-					blogPost: 'storyblok/BlogPost',
+					page: 'storyblok/Page',
+					feature: 'storyblok/Feature',
+					grid: 'storyblok/Grid',
+					teaser: 'storyblok/Teaser',
 				},
 				apiOptions: {
 					// Choose your Storyblok space region

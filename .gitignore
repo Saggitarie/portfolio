@@ -23,4 +23,7 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# mkcert configuration folder
+.cert
+
 node_modules

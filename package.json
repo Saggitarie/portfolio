@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prettierfix": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
@@ -21,6 +22,8 @@
   "devDependencies": {
     "@storyblok/astro": "^4.0.5",
     "@types/node": "^20.12.7",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
     "vite-plugin-mkcert": "^1.17.5"
   }
 }

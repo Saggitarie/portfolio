@@ -1,31 +1,34 @@
-import { defineConfig } from 'astro/config';
-import storyblok from '@storyblok/astro';
-import { loadEnv } from 'vite';
-import mkcert from 'vite-plugin-mkcert';
+import { defineConfig } from "astro/config";
+import storyblok from "@storyblok/astro";
+import { loadEnv } from "vite";
+import mkcert from "vite-plugin-mkcert";
 import tailwind from "@astrojs/tailwind";
-const env = loadEnv("", process.cwd(), 'STORYBLOK');
-
+const env = loadEnv("", process.cwd(), "STORYBLOK");
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [storyblok({
-    accessToken: env.STORYBLOK_TOKEN,
-    components: {
-      // Add your components here
-      page: 'storyblok/Page',
-      feature: 'storyblok/Feature',
-      grid: 'storyblok/Grid',
-      teaser: 'storyblok/Teaser'
-    },
-    apiOptions: {
-      // Choose your Storyblok space region
-      region: 'ap' // optional,  or 'eu' (default)
-    }
-  })
-  , tailwind()],
+  integrations: [
+    storyblok({
+      accessToken: env.STORYBLOK_TOKEN,
+      components: {
+        // Add your components here
+        page: "storyblok/Page",
+        feature: "storyblok/Feature",
+        grid: "storyblok/Grid",
+        teaser: "storyblok/Teaser",
+      },
+      apiOptions: {
+        // Choose your Storyblok space region
+        region: "ap", // optional,  or 'eu' (default)
+      },
+    }),
+    tailwind(),
+  ],
   vite: {
-    plugins: [mkcert({
-      savePath: "./.cert"
-    })]
-  }
+    plugins: [
+      mkcert({
+        savePath: "./.cert",
+      }),
+    ],
+  },
 });

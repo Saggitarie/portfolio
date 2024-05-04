@@ -8,7 +8,9 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prettierfix": "prettier --write ."
+    "prettierfix": "prettier --write .",
+    "pull-sb-components": "storyblok pull-components --space #3000278",
+    "generate-sb-types": "storyblok generate-typescript-typedefs --sourceFilePaths ./components.#3000278.json --destinationFilePath ./component-types-sb.d.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",

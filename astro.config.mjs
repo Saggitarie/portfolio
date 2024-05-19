@@ -1,10 +1,10 @@
-import { defineConfig } from "astro/config";
-import storyblok from "@storyblok/astro";
-import { loadEnv } from "vite";
-import mkcert from "vite-plugin-mkcert";
-import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel/serverless";
-const env = loadEnv("", process.cwd(), "STORYBLOK");
+import { defineConfig } from 'astro/config';
+import storyblok from '@storyblok/astro';
+import { loadEnv } from 'vite';
+import mkcert from 'vite-plugin-mkcert';
+import tailwind from '@astrojs/tailwind';
+import vercel from '@astrojs/vercel/serverless';
+const env = loadEnv('', process.cwd(), 'STORYBLOK');
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,14 +13,14 @@ export default defineConfig({
       accessToken: env.STORYBLOK_TOKEN,
       components: {
         // Add your components here
-        page: "storyblok/Page",
-        feature: "storyblok/Feature",
-        grid: "storyblok/Grid",
-        teaser: "storyblok/Teaser",
+        page: 'storyblok/Page',
+        feature: 'storyblok/Feature',
+        grid: 'storyblok/Grid',
+        teaser: 'storyblok/Teaser',
       },
       apiOptions: {
         // Choose your Storyblok space region
-        region: "ap", // optional,  or 'eu' (default)
+        region: 'ap', // optional,  or 'eu' (default)
       },
     }),
     tailwind(),
@@ -28,10 +28,10 @@ export default defineConfig({
   vite: {
     plugins: [
       mkcert({
-        savePath: "./.cert",
+        savePath: './.cert',
       }),
     ],
   },
-  output: "server",
+  output: 'server',
   adapter: vercel(),
 });
